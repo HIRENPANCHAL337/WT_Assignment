@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join EcoAction – Register</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+
+<nav class="navbar navbar-expand-lg eco-nav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <div class="brand-icon"><i class="fas fa-leaf"></i></div>EcoAction
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="initiatives.html">Initiatives</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <a href="login.html" class="nav-login">Login</a>
+        <a href="register.html" class="btn-join-nav">Join Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="d-flex align-items-center justify-content-center" style="min-height:calc(100vh - 68px);padding:40px 16px;">
+  <div style="width:100%;max-width:560px;">
+
+    <!-- Logo + Title -->
+    <div class="text-center mb-4">
+      <div class="auth-logo-circle fade-up"><i class="fas fa-leaf"></i></div>
+      <h2 class="auth-title fade-up delay-1">Join EcoAction</h2>
+      <p class="auth-subtitle fade-up delay-2">Start making a difference in your community today</p>
+    </div>
+
+    <!-- Card -->
+    <div class="auth-card fade-up delay-2">
+      <p class="auth-card-title">Create Your Account</p>
+      <p class="auth-card-sub">Fill in your details to get started</p>
+
+      <form id="registerForm">
+
+        <div class="mb-3">
+          <label class="eco-label">Full Name</label>
+          <div class="input-icon-wrap">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" class="eco-input" placeholder="John Doe" required />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="eco-label">Email Address</label>
+          <div class="input-icon-wrap">
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" class="eco-input" placeholder="john@example.com" required />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="eco-label">Password</label>
+          <div class="input-icon-wrap">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" class="eco-input" placeholder="••••••••" required />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="eco-label">Location</label>
+          <div class="input-icon-wrap">
+            <i class="fas fa-map-marker-alt input-icon"></i>
+            <input type="text" class="eco-input" placeholder="City, State" required />
+          </div>
+        </div>
+
+        <!-- Environmental Interests -->
+        <div class="mb-4">
+          <label class="eco-label mb-2">Environmental Interests</label>
+          <div class="row g-0">
+            <div class="col-6">
+              <label class="interest-check">
+                <input type="checkbox" /> Recycling
+              </label>
+              <label class="interest-check">
+                <input type="checkbox" /> Clean Water
+              </label>
+              <label class="interest-check">
+                <input type="checkbox" /> Waste Management
+              </label>
+            </div>
+            <div class="col-6">
+              <label class="interest-check">
+                <input type="checkbox" /> Tree Plantation
+              </label>
+              <label class="interest-check">
+                <input type="checkbox" /> Air Quality
+              </label>
+              <label class="interest-check">
+                <input type="checkbox" /> Soil Conservation
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-signin">Create Account</button>
+
+        <p class="text-center mt-3 mb-0" style="font-size:.88rem;color:var(--text-muted);">
+          Already have an account? <a href="login.html" style="color:var(--green-dark);font-weight:600;">Log in</a>
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="eco-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <div class="brand-icon"><i class="fas fa-leaf"></i></div>
+          <span class="footer-brand-name">EcoAction</span>
+        </div>
+        <p class="footer-tagline">Act Local. Impact Global.</p>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>Quick Links</h6>
+        <a href="about.html">About Us</a>
+        <a href="initiatives.html">Browse Initiatives</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>Get Involved</h6>
+        <a href="register.html">Join Now</a>
+        <a href="create.html">Start Initiative</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="col-lg-4">
+        <h6>Follow Us</h6>
+        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 EcoAction. All rights reserved.</p></div>
+</footer>
+
+<div id="ecoToast" class="eco-toast"><i class="fas fa-leaf"></i><span class="toast-msg"></span></div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

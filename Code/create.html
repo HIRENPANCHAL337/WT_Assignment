@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Initiative – EcoAction</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background:var(--cream);">
+<nav class="navbar navbar-expand-lg eco-nav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><div class="brand-icon"><i class="fas fa-leaf"></i></div>EcoAction</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="initiatives.html">Initiatives</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2"><a href="login.html" class="nav-login">Logout</a></div>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fade-up">Start a New Initiative</h1>
+    <p class="fade-up delay-1">Launch your own community environmental project and recruit local volunteers.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-7">
+      <div class="auth-card fade-up" style="max-width:100%;">
+        <h5 style="font-weight:700;color:var(--dark);margin-bottom:4px;">Initiative Details</h5>
+        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:20px;">Fill in the details to create your initiative</p>
+
+        <form id="createForm">
+          <div class="mb-3">
+            <label class="eco-label">Initiative Title *</label>
+            <input type="text" class="eco-input" placeholder="e.g. Sabarmati River Clean-Up" required />
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              <label class="eco-label">Category *</label>
+              <select class="eco-input" style="cursor:pointer;" required>
+                <option value="">Select category</option>
+                <option>🌊 Water</option>
+                <option>🌱 Soil / Plantation</option>
+                <option>♻️ Waste Management</option>
+                <option>💨 Air Quality</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label class="eco-label">Location *</label>
+              <div class="input-icon-wrap">
+                <i class="fas fa-map-marker-alt input-icon"></i>
+                <input type="text" class="eco-input" placeholder="City, State" required />
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="eco-label">Description *</label>
+            <textarea class="eco-input" rows="4" placeholder="Describe what you'll do and what impact you expect..." required style="resize:none;border-radius:10px;"></textarea>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              <label class="eco-label">Start Date *</label>
+              <input type="date" class="eco-input" required />
+            </div>
+            <div class="col-sm-6">
+              <label class="eco-label">Meeting Schedule</label>
+              <input type="text" class="eco-input" placeholder="e.g. Every Sunday 7AM" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="eco-label">Volunteer Goal</label>
+            <input type="number" class="eco-input" placeholder="How many volunteers do you need?" min="1" />
+          </div>
+          <div class="mb-4">
+            <label class="eco-label">Cover Image</label>
+            <input type="file" class="eco-input" accept="image/*" id="imgInput" style="padding:10px;" />
+            <img id="imgPreview" class="mt-2 rounded-3 d-none" style="max-width:100%;max-height:180px;object-fit:cover;" />
+          </div>
+          <button type="submit" class="btn-signin">🚀 Launch Initiative</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="eco-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="d-flex align-items-center gap-2 mb-2"><div class="brand-icon"><i class="fas fa-leaf"></i></div><span class="footer-brand-name">EcoAction</span></div><p class="footer-tagline">Act Local. Impact Global.</p></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6>Quick Links</h6><a href="about.html">About Us</a><a href="initiatives.html">Browse Initiatives</a><a href="events.html">Events</a></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6>Get Involved</h6><a href="register.html">Join Now</a><a href="dashboard.html">Dashboard</a></div>
+      <div class="col-lg-4"><h6>Follow Us</h6><a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-btn"><i class="fab fa-twitter"></i></a><a href="#" class="social-btn"><i class="fab fa-instagram"></i></a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 EcoAction. All rights reserved.</p></div>
+</footer>
+
+<div id="ecoToast" class="eco-toast"><i class="fas fa-leaf"></i><span class="toast-msg"></span></div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$('#imgInput').on('change', function() {
+  var f = this.files[0];
+  if(f) { var r = new FileReader(); r.onload = function(e) { $('#imgPreview').attr('src',e.target.result).removeClass('d-none'); }; r.readAsDataURL(f); }
+});
+$('#createForm').on('submit', function(e) {
+  e.preventDefault();
+  setTimeout(function(){ window.location.href='initiatives.html'; }, 1800);
+});
+</script>
+</body>
+</html>

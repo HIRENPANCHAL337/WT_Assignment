@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – EcoAction</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .dash-stat { border-radius:12px;padding:22px;color:white;position:relative;overflow:hidden; }
+    .dash-stat::after { content:'';position:absolute;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.12);right:-15px;bottom:-15px; }
+    .dash-stat h3 { font-size:2rem;font-weight:800;margin:0 0 4px; }
+    .dash-stat p  { font-size:.82rem;margin:0;opacity:.85; }
+    .init-row { background:white;border-radius:10px;padding:16px;border:1.5px solid var(--border);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:12px; }
+    .init-row h6 { margin:0 0 3px;font-size:.9rem;font-weight:700; }
+    .init-row small { color:var(--text-muted); }
+    .badge-earned { background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:14px;text-align:center;transition:.2s; }
+    .badge-earned:hover { border-color:var(--green-light); }
+    .badge-earned span { font-size:1.8rem;display:block;margin-bottom:4px; }
+    .badge-earned small { font-size:.75rem;color:var(--text-muted); }
+    .activity-item { display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.85rem; }
+    .activity-item:last-child { border-bottom:none; }
+  </style>
+</head>
+<body style="background:var(--cream);">
+
+<nav class="navbar navbar-expand-lg eco-nav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><div class="brand-icon"><i class="fas fa-leaf"></i></div>EcoAction</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="initiatives.html">Initiatives</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="create.html">+ New Initiative</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <a href="login.html" class="nav-login">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Welcome -->
+<div style="background:linear-gradient(135deg,#2D6A4F,#52B788);padding:32px 0;">
+  <div class="container d-flex align-items-center gap-3">
+    <div style="width:56px;height:56px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;border:2px solid rgba(255,255,255,.4);">👤</div>
+    <div>
+      <h4 style="color:white;margin:0;font-weight:700;">Welcome back, John! 👋</h4>
+      <p style="color:rgba(255,255,255,.75);margin:4px 0 0;font-size:.88rem;">San Francisco, CA &nbsp;·&nbsp; Member since Jan 2024</p>
+    </div>
+  </div>
+</div>
+
+<section style="padding:32px 0 60px;">
+  <div class="container">
+    <!-- Stats -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3">
+        <div class="dash-stat" style="background:linear-gradient(135deg,#2D6A4F,#40916C);">
+          <h3>3</h3><p>Initiatives Joined</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="dash-stat" style="background:linear-gradient(135deg,#1a6b8a,#2196a8);">
+          <h3>18</h3><p>Volunteer Hours</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="dash-stat" style="background:linear-gradient(135deg,#7b4f2e,#a06840);">
+          <h3>5</h3><p>Badges Earned</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="dash-stat" style="background:linear-gradient(135deg,#4a4a8a,#6868b0);">
+          <h3>240</h3><p>Impact Points</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- My Initiatives -->
+      <div class="col-lg-8">
+        <div class="bg-white rounded-4 p-4 shadow-sm mb-4">
+          <h5 style="color:var(--green-dark);font-weight:700;margin-bottom:16px;">My Initiatives</h5>
+          <div class="init-row">
+            <div>
+              <h6>Sabarmati River Clean-Up</h6>
+              <small><i class="fas fa-map-marker-alt me-1" style="color:var(--green-light);"></i>Ahmedabad · Every Sunday</small>
+            </div>
+            <a href="initiative-detail.html" class="btn-join-card">View</a>
+          </div>
+          <div class="init-row">
+            <div>
+              <h6>Urban Forest Drive</h6>
+              <small><i class="fas fa-map-marker-alt me-1" style="color:var(--green-light);"></i>Ahmedabad · Saturdays</small>
+            </div>
+            <a href="initiative-detail.html" class="btn-join-card">View</a>
+          </div>
+          <div class="init-row">
+            <div>
+              <h6>Zero Waste Neighbourhood</h6>
+              <small><i class="fas fa-map-marker-alt me-1" style="color:var(--green-light);"></i>Surat · Monthly</small>
+            </div>
+            <a href="initiative-detail.html" class="btn-join-card">View</a>
+          </div>
+          <div class="mt-3">
+            <a href="initiatives.html" style="color:var(--green-dark);font-size:.88rem;font-weight:600;text-decoration:none;">+ Browse more initiatives →</a>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="bg-white rounded-4 p-4 shadow-sm">
+          <h5 style="color:var(--green-dark);font-weight:700;margin-bottom:16px;">My Badges</h5>
+          <div class="row g-2">
+            <div class="col-4 col-sm-2"><div class="badge-earned"><span>🌊</span><small>Water Hero</small></div></div>
+            <div class="col-4 col-sm-2"><div class="badge-earned"><span>🌱</span><small>Planter</small></div></div>
+            <div class="col-4 col-sm-2"><div class="badge-earned"><span>♻️</span><small>Recycler</small></div></div>
+            <div class="col-4 col-sm-2"><div class="badge-earned"><span>⭐</span><small>Top Vol.</small></div></div>
+            <div class="col-4 col-sm-2"><div class="badge-earned"><span>🏆</span><small>10 Hours</small></div></div>
+            <div class="col-4 col-sm-2"><div class="badge-earned" style="opacity:.35;"><span>🔒</span><small>50 Hours</small></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity -->
+      <div class="col-lg-4">
+        <div class="bg-white rounded-4 p-4 shadow-sm">
+          <h5 style="color:var(--green-dark);font-weight:700;margin-bottom:16px;">Recent Activity</h5>
+          <div class="activity-item"><span style="color:var(--green-light);font-size:1.1rem;">🌊</span><div><strong>Joined</strong> Sabarmati River Clean-Up<br><span style="color:#888;font-size:.8rem;">2 days ago</span></div></div>
+          <div class="activity-item"><span style="color:var(--green-light);font-size:1.1rem;">🏆</span><div><strong>Earned</strong> "Top Volunteer" badge<br><span style="color:#888;font-size:.8rem;">5 days ago</span></div></div>
+          <div class="activity-item"><span style="color:var(--green-light);font-size:1.1rem;">🌱</span><div><strong>Attended</strong> Urban Forest Drive<br><span style="color:#888;font-size:.8rem;">1 week ago</span></div></div>
+          <div class="activity-item"><span style="color:var(--green-light);font-size:1.1rem;">🎉</span><div><strong>Registered</strong> on EcoAction<br><span style="color:#888;font-size:.8rem;">Jan 2024</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button id="scrollTop" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+<div id="ecoToast" class="eco-toast"><i class="fas fa-leaf"></i><span class="toast-msg"></span></div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
